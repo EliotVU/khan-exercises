@@ -31,12 +31,11 @@ jQuery.extend(KhanUtil, {
 
 	// Converts a number to its binary representation (with no padding zeroes).
 	decimalToBinary: function( decimal ) {
-		var binary = '', c = 0;
+		var binary = '';
 
 		do {
 			binary = ( ( decimal & 1 ) ? '1' : '0' ) + binary;
 			decimal >>= 1;
-			c++;
 		} while ( decimal > 0 );
 
 		return binary;
